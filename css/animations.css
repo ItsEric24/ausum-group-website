@@ -1,0 +1,163 @@
+/* Animations and Transitions */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Staggered Animation for Lists */
+.staggered-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.staggered-item.visible {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Hover Effects */
+
+/* Button Hover Animation */
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+}
+
+/* Section Headers Animation */
+.section-header {
+  position: relative;
+}
+
+.section-header.animated .section-title {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.section-header.animated .section-subtitle {
+  animation: fadeIn 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.section-header.animated .accent-line {
+  animation: expandLine 0.6s ease 0.4s forwards;
+  width: 0;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Milestone Timeline Animation */
+.milestone {
+  transition: transform var(--transition-medium);
+}
+
+.milestone:hover {
+  transform: translateX(5px);
+}
+
+.milestone-dot {
+  transition: transform var(--transition-medium),
+    background-color var(--transition-medium);
+}
+
+.milestone:hover .milestone-dot {
+  transform: scale(1.2);
+}
+
+/* Pillar Card Hover Effect */
+.pillar-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-medium);
+}
+
+.pillar-card:hover::before {
+  transform: scaleX(1);
+}
+
+.pillar-card:nth-child(2)::before {
+  background-color: var(--color-secondary);
+}
+
+.pillar-card:nth-child(3)::before {
+  background-color: var(--color-accent);
+}
+
+.pillar-card:nth-child(4)::before {
+  background-color: var(--color-success);
+}
+
+.pillar-card:nth-child(5)::before {
+  background-color: var(--color-warning);
+}
+
+/* Navbar Animation */
+.nav-link::after {
+  transition: width var(--transition-medium);
+}
+
+/* Newsletter Form Animation */
+.newsletter-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(221, 161, 94, 0.5);
+}
+
+/* Mobile Menu Animation */
+.nav-menu.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 50;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
