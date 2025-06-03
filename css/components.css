@@ -111,11 +111,6 @@
   color: var(--color-success);
 }
 
-.pillar-icon[data-icon="zane"]::before {
-  content: "Z";
-  color: var(--color-warning);
-}
-
 .pillar-card h3 {
   margin-bottom: var(--spacing-sm);
 }
@@ -146,6 +141,7 @@
   height: 100%;
   background-color: rgba(29, 53, 87, 0.9);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-lg);
@@ -188,7 +184,7 @@
 }
 
 .milestone-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 9px;
   top: 0;
@@ -302,7 +298,7 @@
 }
 
 .invest-list li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--color-primary);
@@ -312,7 +308,7 @@
 /* Benefit Cards */
 .benefits-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: var(--spacing-lg);
 }
 
@@ -345,29 +341,20 @@
   font-size: 1.5rem;
 }
 
-.benefit-icon[data-icon="roi"]::before {
-  content: "↗";
+.benefit-icon[data-icon="clarity"] i {
   color: var(--color-success);
 }
 
-.benefit-icon[data-icon="access"]::before {
-  content: "★";
+.benefit-icon[data-icon="ownership"] i {
   color: var(--color-primary);
 }
 
-.benefit-icon[data-icon="discount"]::before {
-  content: "%";
+.benefit-icon[data-icon="freedom"] i {
   color: var(--color-warning);
 }
 
-.benefit-icon[data-icon="recognition"]::before {
-  content: "♦";
+.benefit-icon[data-icon="connection"] i {
   color: var(--color-accent);
-}
-
-.benefit-icon[data-icon="priority"]::before {
-  content: "⚑";
-  color: var(--color-secondary);
 }
 
 .benefit-card h3 {
@@ -378,4 +365,161 @@
 .benefit-card p {
   margin-bottom: 0;
   color: var(--color-gray-600);
+}
+
+/*Styles for About page */
+.about-hero {
+  background-image: url("https://images.unsplash.com/photo-1492462543947-040389c4a66c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.vision-quote {
+  font-size: 1.5rem;
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-lg);
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.ecosystem-card {
+  background-color: var(--color-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-medium);
+}
+
+.ecosystem-card:hover {
+  transform: translateY(-5px);
+}
+
+.ecosystem-icon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.ecosystem-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.ecosystem-card h4 {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ecosystem-features {
+  margin-top: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+.ecosystem-features li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.ecosystem-features li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: var(--color-primary);
+}
+
+.impact-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.impact-card {
+  background-color: var(--color-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.impact-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.testimonial {
+  background-color: var(--color-gray-100);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: var(--spacing-sm);
+}
+
+.testimonial cite {
+  color: var(--color-gray-600);
+  font-style: normal;
+}
+
+.journey-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+  position: relative;
+}
+
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-gray-300);
+  z-index: 0;
+}
+
+.timeline-phase {
+  background-color: var(--color-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-phase h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.timeline-phase ul {
+  padding-left: var(--spacing-md);
+}
+
+.timeline-phase ul li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.timeline-phase ul li::before {
+  content: "→";
+  position: absolute;
+  left: -1rem;
+  color: var(--color-primary);
 }
