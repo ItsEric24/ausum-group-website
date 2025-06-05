@@ -150,6 +150,7 @@
 
   .nav-toggle.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-dark);
   }
 
   .nav-toggle.active span:nth-child(2) {
@@ -158,6 +159,7 @@
 
   .nav-toggle.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-dark);
   }
 
   /* Hero Adjustments */
