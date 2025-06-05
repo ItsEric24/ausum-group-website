@@ -6,6 +6,10 @@ export default defineConfig({
       input: {
         main: "/index.html",
         about: "/about.html",
+        appeals: "/appeals.html",
+        nexus: "/nexus.html",
+        studios: "/studios.html",
+        just: "/just.html",
       },
     },
   },
