@@ -10,6 +10,7 @@ export default defineConfig({
         nexus: "/nexus.html",
         studios: "/studios.html",
         just: "/just.html",
+        invest: "/invest.html",
       },
     },
   },
