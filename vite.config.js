@@ -11,6 +11,7 @@ export default defineConfig({
         studios: "/studios.html",
         just: "/just.html",
         invest: "/invest.html",
+        contact: "/contact.html"
       },
     },
   },

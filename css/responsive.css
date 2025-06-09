@@ -52,7 +52,8 @@
   .about-content,
   .mission-content,
   .traction-content,
-  .invest-content {
+  .invest-content,
+  .contact-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
@@ -125,6 +126,20 @@
   .phase-amount-shape {
     font-size: 2rem;
   }
+
+  /* Contact Form Adjustments */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .contact-info {
+    order: -1;
+  }
+
+  .contact-alternatives {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -182,6 +197,7 @@
 
   .nav-toggle.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-dark);
   }
 
   .nav-toggle.active span:nth-child(2) {
@@ -190,6 +206,7 @@
 
   .nav-toggle.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-dark);
   }
 
   /* Hero Adjustments */
@@ -253,6 +270,29 @@
 
   .phase-amount-shape {
     font-size: 1.7rem;
+  }
+
+  /* Contact Form Mobile Adjustments */
+  .contact-form-container {
+    padding: var(--spacing-lg);
+  }
+
+  .contact-reasons {
+    gap: var(--spacing-md);
+  }
+
+  .contact-reason {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-links .btn {
+    width: 100%;
   }
 }
 
@@ -327,5 +367,28 @@
 
   .phase-amount-shape {
     font-size: 1.4rem;
+  }
+
+  /* Contact Form Small Mobile */
+  .contact-form-container {
+    padding: var(--spacing-md);
+  }
+
+  .contact-form {
+    gap: var(--spacing-md);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .contact-method {
+    padding: var(--spacing-lg);
+  }
+
+  .method-icon {
+    font-size: 2.5rem;
   }
 }
