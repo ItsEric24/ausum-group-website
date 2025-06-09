@@ -301,9 +301,9 @@
   font-size: 2rem;
 }
 
-.pillar-icon[data-icon="nexus"]::before {
-  content: "N";
-  color: var(--color-primary);
+.pillar-icon[data-icon="nexus"] img {
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .pillar-icon[data-icon="appeals"]::before {
@@ -603,6 +603,16 @@
 /* New styles for About page */
 .about-hero {
   background-image: url("https://images.unsplash.com/photo-1492462543947-040389c4a66c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWZyaWNhbiUyMHlvdXRofGVufDB8fDB8fHww");
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-light);
 }
 
 .vision-quote {
@@ -758,6 +768,16 @@
 }
 
 /* Investment Page Specific Styles */
+.invest-hero {
+  height: 70vh;
+  background-color: var(--color-secondary-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-light);
+}
 .investment-value-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -889,6 +909,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1;
+  padding-right: var(--spacing-xl);
 }
 
 .phase-header h3 {

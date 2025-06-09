@@ -125,6 +125,7 @@
 
   .phase-amount-shape {
     font-size: 2rem;
+    padding-right: 0;
   }
 
   /* Contact Form Adjustments */
@@ -270,6 +271,7 @@
 
   .phase-amount-shape {
     font-size: 1.7rem;
+    padding-right: 0;
   }
 
   /* Contact Form Mobile Adjustments */
@@ -367,6 +369,7 @@
 
   .phase-amount-shape {
     font-size: 1.4rem;
+    padding-right: 0;
   }
 
   /* Contact Form Small Mobile */
