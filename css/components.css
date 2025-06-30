@@ -321,9 +321,14 @@
   color: var(--color-success);
 }
 
-.pillar-icon[data-icon="zane"]::before {
-  content: "Z";
-  color: var(--color-warning);
+.pillar-icon[data-icon="zane"] img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.pillar-icon[data-icon="empty"]::before {
+  content: "+";
+  color: var(--color-success);
 }
 
 .pillar-card h3 {
@@ -376,6 +381,10 @@
 
 .pillar-overlay .btn {
   margin-top: auto;
+}
+
+.pillar-opacity{
+  opacity: 0.5;
 }
 
 /* Traction List */
@@ -966,4 +975,17 @@
 
 .phase-cta {
   margin-top: var(--spacing-lg);
+}
+
+.eyewear-stand-img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.eyewear-stand-img-container img{
+  object-fit: contain;
+  width: 300px;
 }
