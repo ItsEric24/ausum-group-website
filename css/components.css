@@ -316,8 +316,8 @@
   color: var(--color-accent);
 }
 
-.pillar-icon[data-icon="just"]::before {
-  content: "J";
+.pillar-icon[data-icon="fund"]::before {
+  content: "F";
   color: var(--color-success);
 }
 
@@ -383,7 +383,7 @@
   margin-top: auto;
 }
 
-.pillar-opacity{
+.pillar-opacity {
   opacity: 0.5;
 }
 
@@ -977,7 +977,7 @@
   margin-top: var(--spacing-lg);
 }
 
-.eyewear-stand-img-container{
+.eyewear-stand-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -985,7 +985,27 @@
   margin-bottom: 40px;
 }
 
-.eyewear-stand-img-container img{
+.eyewear-stand-img-container img {
   object-fit: contain;
   width: 300px;
+}
+
+/* Vision Content for Fund page */
+.flywheel-vision-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flywheelvision-intro {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-gray-700);
+}
+
+.flywheel-visual {
+  margin-top: var(--spacing-xl);
 }

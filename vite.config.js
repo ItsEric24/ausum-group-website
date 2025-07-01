@@ -9,7 +9,7 @@ export default defineConfig({
         appeals: "/appeals.html",
         nexus: "/nexus.html",
         studios: "/studios.html",
-        just: "/just.html",
+        fund: "/fund.html",
         invest: "/invest.html",
         contact: "/contact.html"
       },
